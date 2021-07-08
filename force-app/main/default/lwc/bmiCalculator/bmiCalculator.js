@@ -1,12 +1,11 @@
-import { LightningElement, track } from "lwc";
+import { LightningElement } from "lwc";
 
 export default class BmiCalculator extends LightningElement {
   cardTitle = "BMI Calculator";
 
   weight;
   height;
-
-  @track bmi;
+  bmi;
 
   onWeightChange(event) {
     this.weight = parseFloat(event.target.value);
